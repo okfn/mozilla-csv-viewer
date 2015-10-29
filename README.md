@@ -3,11 +3,11 @@
 mozilla-csv-viewer
 ==================
 
-This is a port of  Ruffus Pollock 's the chrome-cs-viewer ( https://github.com/rgrp/chrome-csv-viewer ). 
-I port it on FireFox . You can continue dovelopment  by using The Addon-Sdk, You 
-can download it From Here  https://developer.mozilla.org/en-US/Add-ons/SDK . Basically this extension 
-allow you instead of dowloadin a CSV file locally it open new tabs and display your datas into The reclineJs 's 
-Grid/Map Viewer . You can get more informations about what does reclineJS does by visising the official website 
+This is a port of  Ruffus Pollock's the chrome-cs-viewer ( https://github.com/rgrp/chrome-csv-viewer ).
+I port it on FireFox. You can continue development by using The Addon-Sdk, You
+can download it From Here  https://developer.mozilla.org/en-US/Add-ons/SDK. Basically this extension
+allow you instead of dowloadin a CSV file locally it open new tabs and display your datas into The reclineJs 's
+Grid/Map Viewer. You can get more informations about what does reclineJS does by visising the official website
 here http://okfnlabs.org/recline/
 
 Building
@@ -16,15 +16,23 @@ Building
 
 git clone https://github.com/okfn/mozilla-csv-viewer
 
+Run git submodule commands to get the last version of chrome-csv-viewer
+  > git submodule init
+  > git submodule update
 
-Run The extension from Cli (Addon cli)
-  >  cfx run
+Install jpm
+  > npm install jpm --global
+or
+  > sudo install jpm --global
 
-Package The extension, this mean That we are going to genarte the  
-The Xpi File 
+Run The extension from Cli (Addon jpm)
+  >  jpm run
 
-For The Extension Manager 
-  >  cfx xpi
+Package The extension, this mean That we are going to genarte the
+The Xpi File
+
+For The Extension Manager
+  >  jpm xpi
 
 
 Install into The Browser
@@ -44,11 +52,13 @@ Install into The Browser
 Links
 =======
 
-You can find interesting things here (like How to handle communication 
+You can find interesting things here (like How to handle communication
 between `content_scripts` and 'data.url('file.html')'. Or How you can use
-The messaging processing between `content_scripts` and 'main.js' file 
-with `posMessage` and `onMessage` stuffs 
+The messaging processing between `content_scripts` and 'main.js' file
+with `posMessage` and `onMessage` stuffs
 
+
+https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/jpm
 
 http://blog.mozilla.org/addons/2011/09/01/add-on-sdk-faq-content-script-access/
 
@@ -58,37 +68,37 @@ https://developer.mozilla.org/en-US/Add-ons/SDK/Guides/Content_Scripts
 contributing
 ===========
 
-Fork code 
+Fork code
 
-Open new Issues 
+Open new Issues
 
-pull request 
+pull request
 
 Wait for review this will take generally some minutes :)
 
 
-Licence: 
+Licence:
 ========
 
 
 Copyright & License
 
-Copyright 2014 Alioune Dia . Note that this utilizes various third-party libraries which 
+Copyright 2014 Alioune Dia . Note that this utilizes various third-party libraries which
 may be differently licensed.
 
 Licensed under the MIT license:
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this 
+Permission is hereby granted, free of charge, to any person obtaining a copy of this
 software and associated documentation files (the "Software"), to deal in the Software
 without restriction, including without limitation the rights to use, copy, modify, merge,
-publish, distribute, sublicense, and/or sell copies of the Software, and to permit 
+publish, distribute, sublicense, and/or sell copies of the Software, and to permit
 persons to whom the Software is furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all copies or 
+The above copyright notice and this permission notice shall be included in all copies or
 substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
-BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND 
-NONINFRINGEMENT.  IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, 
-DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
+BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT.  IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
